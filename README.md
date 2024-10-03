@@ -1,8 +1,44 @@
-# Getting Started with Create React App
+## Virtual Book Library
+## Overview
+The Virtual Book Library is a React.js web application that allows users to browse a collection of books, view detailed information about each book, and manage their personal library. Users can add or remove books from their personal library and navigate through various pages using React Router.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project demonstrates proficiency in React component structure, state management, routing, and reusable component design. It is fully responsive across desktop, tablet, and mobile devices.
 
-## Available Scripts
+## Features
+- **Book Listing (Home Page)** : Displays a grid of books with details like title, author, genre, and rating. Includes a search bar to filter books by title, author, or genre.
+- **Book Details Page**: Displays detailed information about a selected book, such as title, author, genre, rating, description, and publication year. Users can add books to their personal library from this page.
+- **My Library Page**: Shows a list of books added to the user's personal library. Users can remove books from this collection.
+
+## Technologies Used
+- **React.js**: Core framework
+- **React Router**: For handling navigation between pages
+- **Context API**: For global state management (library and books)
+- **CSS**: For styling the components and ensuring responsiveness
+
+## Project Structure
+📁 src
+├── 📁 components
+│   ├── BookCard.js
+│   ├── BookList.js
+│   ├── SearchBar.js
+│   ├── SearchBar.css
+│   ├── Header.js
+├── 📁 pages
+│   ├── HomePage.js
+│   ├── BookDetailsPage.js
+│   ├── BookDetailsPage.css
+│   ├── MyLibraryPage.js
+├── 📁 context
+│   ├── LibraryContext.js
+├── 📁 services
+│   └── booksData.js
+├── App.js
+├── App.css
+├── index.js
+└── README.md
+
+
+## How to Run the Project
 
 In the project directory, you can run:
 
@@ -14,11 +50,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -29,42 +60,19 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Pages Overview
+1. **Home Page (Book Listing)**
+- **BookList Component**: Displays books in a responsive grid layout.
+- **SearchBar Component**: Allows users to search for books by title, author, or genre.
+- **Routing**: Clicking on a book navigates to the Book Details Page.
+2. **Book Details Page**
+- **Book Details**: Displays detailed information about the selected book.
+- **Add to Library Button**: Allows users to add books to their personal library, which is managed via Context API.
+3. **My Library Page**
+- **Library Management**: Displays books that the user has added to their personal library.
+- **Remove from Library**: Users can remove books from their library. This action updates the global state using Context API.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Styling and Responsiveness
+- **CSS**: Each page and component has its own CSS file for better organization.
+- **Responsive Design**: The app is fully responsive and adjusts the layout for mobile, tablet, and desktop screens.
+- **Book Cards**: The book cards are designed with a clean, modern look, including hover effects and smooth transitions.
